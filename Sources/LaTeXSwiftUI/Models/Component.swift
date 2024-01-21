@@ -28,12 +28,12 @@ import MathJaxSwift
 import SwiftUI
 
 /// A block of components.
-internal struct ComponentBlock: Hashable, Identifiable {
-  
+public struct ComponentBlock: Hashable, Identifiable {
+
   /// The component's identifier.
   ///
   /// Unique to every instance.
-  let id = UUID()
+  public let id = UUID()
   
   /// The block's components.
   let components: [Component]
@@ -47,8 +47,8 @@ internal struct ComponentBlock: Hashable, Identifiable {
 }
 
 /// A LaTeX component.
-internal struct Component: CustomStringConvertible, Equatable, Hashable {
-  
+public struct Component: CustomStringConvertible, Equatable, Hashable {
+
   /// A LaTeX component type.
   enum ComponentType: String, Equatable, CustomStringConvertible {
     
@@ -148,7 +148,7 @@ internal struct Component: CustomStringConvertible, Equatable, Hashable {
   }
   
   /// The component's description.
-  var description: String {
+  public var description: String {
     return "(\(type), \"\(text)\")"
   }
   

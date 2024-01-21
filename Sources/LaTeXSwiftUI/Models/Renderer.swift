@@ -36,8 +36,8 @@ import Cocoa
 
 /// Renders equation components and updates their rendered image and offset
 /// values.
-internal class Renderer: ObservableObject {
-  
+public class Renderer: ObservableObject {
+
   // MARK: Public properties
   
   /// The view's input string.
@@ -65,7 +65,7 @@ internal class Renderer: ObservableObject {
   /// Initializes a render state with an input string.
   ///
   /// - Parameter latex: The view's input string.
-  init(latex: String) {
+  public init(latex: String) {
     self.latex = latex
   }
   
@@ -111,7 +111,7 @@ extension Renderer {
   ///   - font: The `font environment` variable.
   ///   - displayScale: The `displayScale` environment variable.
   ///   - texOptions: The `texOptions` environment variable.
-  func renderSync(
+  public func renderSync(
     unencodeHTML: Bool,
     parsingMode: LaTeX.ParsingMode,
     processEscapes: Bool,
@@ -137,7 +137,7 @@ extension Renderer {
   ///   - font: The `font environment` variable.
   ///   - displayScale: The `displayScale` environment variable.
   ///   - texOptions: The `texOptions` environment variable.
-  func render(
+  public func render(
     unencodeHTML: Bool,
     parsingMode: LaTeX.ParsingMode,
     processEscapes: Bool,
