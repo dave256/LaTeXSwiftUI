@@ -234,7 +234,7 @@ extension Renderer {
   ///
   /// - Parameter block: The block.
   /// - Returns: The image, its size, and any associated error text.
-  @MainActor func convertToImage(
+  @MainActor public func convertToImage(
     block: ComponentBlock,
     font: Font,
     displayScale: CGFloat,
@@ -258,7 +258,7 @@ extension Renderer {
   ///   - displayScale: The current display scale.
   ///   - renderingMode: The image's rendering mode.
   /// - Returns: An image and its size.
-  @MainActor func convertToImage(
+  @MainActor public func convertToImage(
     component: Component,
     font: Font,
     displayScale: CGFloat,
